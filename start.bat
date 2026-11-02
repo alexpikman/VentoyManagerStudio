@@ -24,7 +24,6 @@ echo [INFO] Starting local application server...
 echo [INFO] Address: http://127.0.0.1:5454
 echo [INFO] Current foundation is read-only.
 echo.
-start "" "http://127.0.0.1:5454"
 python app.py
 
 echo.
