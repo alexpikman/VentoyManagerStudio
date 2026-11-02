@@ -5,6 +5,8 @@ import json
 import logging
 import mimetypes
 import platform
+import threading
+import webbrowser
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -138,6 +140,7 @@ def run_server() -> None:
 
     logger.info("Ventoy Manager Studio запущена: http://%s:%s", HOST, PORT)
     logger.info("Режим первого этапа: локальный интерфейс и диагностика (только чтение).")
+    threading.Timer(1.0, webbrowser.open, args=(f"http://{HOST}:{PORT}",)).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
