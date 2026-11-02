@@ -1,0 +1,1 @@
+# Ventoy Manager Studio foundation uses only the Python standard library.
