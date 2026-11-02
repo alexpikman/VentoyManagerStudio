@@ -5,7 +5,6 @@ import json
 import logging
 import mimetypes
 import platform
-import socket
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
